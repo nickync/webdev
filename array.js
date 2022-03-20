@@ -72,3 +72,26 @@ function promptFunction() {
     }
     document.getElementById('two').textContent = textArray.slice(0,-1)
 }
+
+/* 
+Translate border-left-width to borderLeftWidth
+importance: 5
+Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+
+That is: removes all dashes, each word after dash becomes uppercased.
+
+Examples:
+
+// camelize("background-color") == 'backgroundColor';
+// camelize("list-style-image") == 'listStyleImage';
+// camelize("-webkit-transition") == 'WebkitTransition'; 
+*/
+
+
+function camelize(str) {
+    let listStr = str.split('')
+    console.log(listStr)
+    console.log(str)
+    console.log(123)
+
+}
