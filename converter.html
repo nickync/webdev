@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="50">
+    <link rel="stylesheet" href="converter.css">
+    <title>Document</title>
+<body>
+    <div id="top">
+        <h1>Metric/Imperial unit conversion</h1>
+        <input type="text" id="inputNumber" value="20">
+        <button id="number" type="button" onclick="conversion()">Convert</button>
+    </div>
+
+    <div id="bottom">
+        <div>
+            <h2>Length (Meter/Feet)</h2>
+            <h3 id="meter"></h3>
+        </div>
+        <div>
+            <h2>Volumn (Liters/Gallons)</h2>
+            <h3 id="volumn"></h3>
+        </div>
+        <div>
+            <h2>Mass (Kilograms/Pounds)</h2>
+            <h3 id="mass"></h3>
+        </div>
+    </div>
+    <script src="converter.js"></script>
+</body>
+</html>
