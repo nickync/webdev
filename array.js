@@ -90,8 +90,40 @@ Examples:
 
 function camelize(str) {
     let listStr = str.split('')
-    console.log(listStr)
-    console.log(str)
-    console.log(123)
-
+    let indexArray = []
+    for (i=0;i<listStr.length;i++){
+        if (listStr[i] === '-') {
+            indexArray.push(i)
+            listStr.splice(i,1)
+            listStr[i] = listStr[i].toUpperCase()
+        }
+    }
+    listStr = listStr.join('')
+    return document.getElementById('three').textContent = listStr
 }
+
+
+/* Filter range
+importance: 4
+Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
+
+The function should not modify the array. It should return the new array.
+
+For instance:
+
+let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+alert( filtered ); // 3,1 (matching values)
+
+alert( arr ); // 5,3,8,1 (not modified) */
+
+let arr = [5, 3, 8, 1]
+
+function filterRange(arr, a, b) {
+    let compareA = arr.filter(num => num >= a && num <= b)
+    return compareA
+}
+
+console.log(filterRange(arr, 1, 4))
