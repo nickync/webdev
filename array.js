@@ -416,13 +416,13 @@ For instance:
 
 function unique(arr) {
   /* your code */
-}
+
 
 /* let strings = ["Hare", "Krishna", "Hare", "Krishna",
   "Krishna", "Krishna", "Hare", "Hare", ":-O"
 ];
 
-alert( unique(strings) ); // Hare, Krishna, :-O */ */
+alert( unique(strings) ); // Hare, Krishna, :-O */
 
 
 
@@ -458,3 +458,100 @@ usersById = {
 In this task we assume that id is unique. There may be no two array items with the same id.
 
 Please use array .reduce method in the solution. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================
+// Add character object
+const aurora = {
+    name: 'aurora',
+    health:100,
+    strength: 25,
+    experience: 0,
+
+    describe() {
+        return `${this.name} has ${this.health} health points and ${this.strength} strength and ${this.experience} EXP.`
+    }
+};
+
+console.log(aurora.describe())
+
+
+/* Modeling a dog
+
+Complete the following program to add the dog object definition. */
+
+// TODO: create the dog object here
+const dog = {
+    name: 'Rec',
+    species: 'taiwan',
+    size: 5,
+
+    bark() {
+        return `Wooooooof`
+    }
+}
+
+console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
+
+
+/* Modeling a circle
+
+Complete the following program to add the circle object definition. Its radius value is input by the user. */
+
+const r = Number(prompt("Enter the circle radius:"));
+
+// TODO: create the circle object here
+const circle = {
+    circumference(){
+        return 2 * Math.PI * r
+    },
+
+    area() {
+        return (this.circumference(r)/(2*Math.PI))**2 * Math.PI
+    }
+}
+
+console.log(`Its circumference is ${circle.circumference()}`);
+console.log(`Its area is ${circle.area()}`);
+
+
+/* Modeling a bank account
+
+Write a program that creates an account object with the following characteristics:
+
+A name property set to "Alex".
+A balance property set to 0.
+A credit method adding the (positive or negative) value passed as an argument to the account balance.
+A describe method returning the account description.
+Use this object to show its description, crediting 250, debiting 80, then show its description again. */
+
+const account = {
+    name: 'Alex',
+    balance: 0,
+
+    credit(num) {
+        return this.balance += num
+    },
+
+    describe() {
+        return `${this.name} has ${this.balance} millions in the account.`
+    }
+}
+
+console.log(account.describe())
+console.log(account.credit(250))
+console.log(account.credit(-80))
+console.log(account.describe())
