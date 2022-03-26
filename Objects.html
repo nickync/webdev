@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+
+
+    <script>
+        let user = {};
+        user.name = 'John'
+        user.surname = 'Smitch'
+        user.name = 'Pete'
+        delete user.name
+
+        function isEmpty(obj) {
+            for (let key in obj) {
+                return true
+            }
+            return false
+        }
+
+        let salaries = {
+                John: 100,
+                Ann: 160,
+                Pete: 130
+        }
+
+
+        sum = 0
+        for(let key in salaries) {
+            sum += salaries[key]
+        }
+        console.log(sum)
+        
+        
+
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+        for (let key in menu) {
+            if (typeof menu[key] === 'number'){
+                menu[key] *= 2
+            }
+        }
+
+        console.log(menu)
+
+    </script>
+</body>
+</html>
